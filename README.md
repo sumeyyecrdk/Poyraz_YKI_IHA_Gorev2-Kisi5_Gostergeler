@@ -1,0 +1,1 @@
+# Poyraz_YKI_IHA_Gorev2-Kisi5_Gostergeler
