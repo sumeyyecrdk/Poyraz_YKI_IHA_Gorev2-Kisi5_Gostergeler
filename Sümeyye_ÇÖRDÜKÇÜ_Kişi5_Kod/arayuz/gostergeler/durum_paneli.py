@@ -68,12 +68,12 @@ class DurumPaneli(QWidget):
         if t.armed:
             self.ucakarm.setText("ARM")
             self.ucakarm.setStyleSheet("color:#2ea043; font-size: 16px; font-weight: bold; background: transparent; border: none;")
-        # arm durumu "DISARM" ise etiket yazısı DISARM şeklinde ayarlanıyor ve istenediği gibi bu ayarlamada kırmızı renk kullanılıyor.
+        # arm durumu "DISARM" ise etiket yazısı DISARM şeklinde ayarlanıyor ve istendiği gibi bu ayarlamada kırmızı renk kullanılıyor.
         else:
             self.ucakarm.setText("DISARM")
             self.ucakarm.setStyleSheet("color:red; font-size: 16px; font-weight: bold; background: transparent; border: none;")
         
-        # telemetri paketindeki mod bilgisi (bu zaten bir string) doğrudan self.ucakmod etikteine yazdırıldı.
+        # telemetri paketindeki mod bilgisi (bu zaten bir string) doğrudan self.ucakmod etiketine yazdırıldı.
         self.ucakmod.setText(t.mode)
         # telemetri paketindeki next_waypoint alanı fstring formatıyla yazdırıldı.
         self.next_wp.setText(f"WP: {t.next_waypoint}")
