@@ -18,7 +18,7 @@ class UcusGostergeleri(QWidget):
     def __init__(self, parent=None):
 
         #miras alınan QWidget sınıfının kendi içinde, bir widget'ın düzgün çalışması için gereken bir sürü gizli hazırlık var.
-        #super ile bu miras alınan sınıfı çağırıyorum ki bu hazırlıklar yapılsın ve bizim UcusGostergeleri nesnemiz doğru şekişde oluşsun.
+        #super ile bu miras alınan sınıfı çağırıyorum ki bu hazırlıklar yapılsın ve bizim UcusGostergeleri nesnemiz doğru şekilde oluşsun.
         super().__init__(parent)
         self._kur()
 
