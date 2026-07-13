@@ -100,7 +100,7 @@ class FonksiyonelTestPenceresi(QWidget):
         yeni_durum = not self.baglanti_durumlari[hat_adi]
         self.baglanti_durumlari[hat_adi] = yeni_durum
         
-        # hat_durumu_guncelle fonksiyonunu çağırıyoruz!
+        # hat_durumu_guncelle fonksiyonunu çağırıyoruz
         self.baglanti.hat_durumu_guncelle(hat_adi, yeni_durum)
         
         # Görsel geri bildirimler
