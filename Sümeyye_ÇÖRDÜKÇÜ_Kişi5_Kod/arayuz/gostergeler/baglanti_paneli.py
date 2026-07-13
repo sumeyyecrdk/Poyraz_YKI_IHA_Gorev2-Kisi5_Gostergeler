@@ -23,12 +23,6 @@ class BaglantiPaneli(QWidget):
         self._kur()
 
     def _kur(self) -> None:
-        """
-        gcs_temiz create_connection_panel_only() içeriğini buraya taşı.
-        3 satır: "Uçak (MAVLink)", "Görev Bilgisayarı", "Sunucu"
-        Her satırda: isim etiketi + renkli çizgi + BAĞLAN butonu
-        """
-
         #panelin arka planını siyah yapıyoruz,kenarlık yok
         self.setStyleSheet("background-color: #000000; border: none;")
 
@@ -53,7 +47,7 @@ class BaglantiPaneli(QWidget):
             "QPushButton:pressed { background: #161b22; color: #58a6ff; }"
         )
 
-        # boş bir kutu oluşturuldu. bu kutu döngüde dönerkenki tek bir veriyi temsil edecek. bunlaarı yatay sıralayan bir düzenleyici oluşturuldu ve boş kutuya bağlandı. 
+        # boş bir kutu oluşturuldu. bu kutu döngüde dönerkenki tek bir veriyi temsil edecek. bunları yatay sıralayan bir düzenleyici oluşturuldu ve boş kutuya bağlandı. 
         for name, hat_adi in _HATLAR:
             row_widget = QWidget()
             row_lay = QHBoxLayout(row_widget)
@@ -70,27 +64,27 @@ class BaglantiPaneli(QWidget):
             line.setFrameShape(QFrame.HLine)
             line.setFixedHeight(3)
             line.setStyleSheet(f"background-color: {_RENK_KOPUK}; border: none;")
-            # çizginin pencere genişledikçe genişleymesi yükseklik yönünde uzadıkca sabti kalması ayarlandı.
+            # çizginin pencere genişledikçe genişlemesi, yükseklik yönünde uzadıkca sabit kalması ayarlandı.
             line.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
 
-            # üzerinde BAĞLAN yazan bir buton yaratıldı, genişliği ayarlandı. düğme tıklnaınca basılı durumda kalması sağlandı ve btn_style bu butona bağlandı.
+            # üzerinde BAĞLAN yazan bir buton yaratıldı, genişliği ayarlandı. düğme tıklanınca basılı durumda kalması sağlandı ve btn_style bu butona bağlandı.
             btn_status = QPushButton("BAĞLAN")
             btn_status.setFixedWidth(110)
             btn_status.setCheckable(True)
             btn_status.setStyleSheet(btn_style)
 
-            # üretilen bu elemanları yukarıda yaratılan boş kutuya eklendi.
+            # üretilen bu elemanlar yukarıda yaratılan boş kutuya eklendi.
             row_lay.addWidget(lbl)
             row_lay.addWidget(line)
             row_lay.addWidget(btn_status)
 
-            # mini kutu panelin ana dikey düzenleyicisine(layout) eklendi.
+            # mini kutu, panelin ana dikey düzenleyicisine(layout) eklendi.
             layout.addWidget(row_widget)
             
             # listedeki hat_adi değişkenleri line değerine bağlandı.
             self._hat_satirlari[hat_adi] = line
 
-        # üzerinde Sistem Hazır yazan bir metin kutusu oluşturuldu. rengi, stili ayarlnadı ve panele eklendi.
+        # üzerinde Sistem Hazır yazan bir metin kutusu oluşturuldu. rengi, stili ayarlandı ve panele eklendi.
         self.connection_status_log = QLabel("Sistem Hazır")
         self.connection_status_log.setStyleSheet("color: #58a6ff; font-size: 12px; border: none; padding-top: 5px;")
         self.connection_status_log.setAlignment(Qt.AlignCenter)
@@ -103,7 +97,7 @@ class BaglantiPaneli(QWidget):
 
         #listeden gelen ürünlerin hat_adi karşılığında gelen çizgi nesnesi çekilip line değişkenine atandı.
         line = self._hat_satirlari.get(hat_adi)
-        # eğer line, sözlükte tanımlı 3 elemandan biri değilse program durduruluyor.
+        # eğer line, sözlükte tanımlı 3 elemandan biri değilse program durduruldu.
         if line is None:
             return
         
