@@ -28,7 +28,7 @@ class KontrolPaneli(QWidget):
     def _kur(self) -> None:
         self.setStyleSheet("background-color: #000000; border: none;")
 
-        #satır ve sütunlardan oluşan bir tablo oluşturuldu. kenar boşlukları ayarlandı.griddek hücreler arasındaki boşluk ayarlandı.
+        #satır ve sütunlardan oluşan bir tablo oluşturuldu. kenar boşlukları ayarlandı.griddeki hücreler arasındaki boşluk ayarlandı.
         grid = QGridLayout(self)
         grid.setContentsMargins(8, 4, 8, 4)
         grid.setSpacing(6)
@@ -129,7 +129,7 @@ class KontrolPaneli(QWidget):
             "border: 1px solid #30363d; selection-background-color: #21262d; } "
         )
 
-        # SET butonu diğer butonlardan farklı bir stil kullanıyor çünkü bu buton görse olarak daha belirgin/vurgulu olması gerekn bir "onayla/uygula" butonu.
+        # SET butonu diğer butonlardan farklı bir stil kullanıyor çünkü bu buton görsel olarak daha belirgin/vurgulu olması gereken bir "onayla/uygula" butonu.
         btn_set_mod = QPushButton("SET")
         btn_set_mod.setStyleSheet(
             "QPushButton { background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #388bfd, stop:1 #58a6ff); "
