@@ -17,6 +17,7 @@ Projeyi daha düzenli tutabilmek için dosyaları şu şekilde ayırdım:
 *  **`arayuz/`**: Göstergelerin çizimlerini ve ekran tasarımlarını yazdığım asıl kod dosyalarım burada yer alıyor.
 *  **`assets/`**: Kod içerisindeki görsel kaynakların import yollarında (`ModuleNotFoundError: No module named 'assets'`) hata alınmaması ve kütüphane kaynaklarının (`qfi_rc.py`) sorunsuz import edilebilmesi için yapılandırdığım teknik klasördür.
 *  **`test_kisi5.py`**: Projeyi çalıştırmak ve göstergelerin nasıl çalıştığını test etmek için kullandığım ana Python dosyası.
+*   **`core.py`**: Test kodunu çalıştırabilmek için dosyaya dahil edildi.
 
 ---
 **Hazırlayan:** Sümeyye Çördükçü (Kişi 5 - Göstergeler Modülü)
