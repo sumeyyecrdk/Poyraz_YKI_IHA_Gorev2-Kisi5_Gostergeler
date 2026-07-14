@@ -79,7 +79,7 @@ class UcusGostergeleri(QWidget):
         self.alt.setAltitude(t.altitude)   
         self.alt.update()
         
-        # HSI göstergesine telemetrideki heading değeri(yön;zaten derece cinsinden,çevrim gerektirmiyor) verildi ve ekran güncellendi.
+        # HSI göstergesine telemetrideki heading değeri verildi ve ekran güncellendi.
         self.hsi.setHeading(t.heading)
         self.hsi.update()
 
